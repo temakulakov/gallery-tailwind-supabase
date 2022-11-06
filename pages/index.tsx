@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 
@@ -48,7 +49,7 @@ export default function Gallery({ images }: { images: Image[] }) {
 function BlurImage({ image }: { image: Image }) {
   const [isLoading, setIsLoading] = useState(true);
   return (
-    <a href='#' className='group'>
+    <Link href={`https://vk.com/${image.username}`} className='group'>
       <div
         className='aspect-w-1 aspect-h-1 
       xl:aspect-w-7 xl:aspect-h-8 
@@ -74,6 +75,6 @@ function BlurImage({ image }: { image: Image }) {
       <p className='mt-1 ml-1  text-lg font-medium text-gray-900'>
         {image.name}
       </p>
-    </a>
+    </Link>
   );
 }
