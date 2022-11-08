@@ -34,7 +34,7 @@ export default function Gallery({ images }: { images: Image[] }) {
   return (
     <div
       className='max-w-2xl mx-auto py-12 px-4 sm:py-24 sm:px-16 
-    lg;max-w-7xl lg:px-8'>
+    lg;max-w-8xl lg:px-8'>
       <div
         className='grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 
       lg:grid-cols-3 xl:gris-cols-4 xl:gap-x-8'>
@@ -52,7 +52,7 @@ function BlurImage({ image }: { image: Image }) {
     <Link href={`https://vk.com/${image.username}`} className='group'>
       <div
         className='aspect-w-1 aspect-h-1 
-      xl:aspect-w-7 xl:aspect-h-8 
+      xl:aspect-w-8 xl:aspect-h-8 
       w-full overflow-hidden rounded-lg bg-gray-200'>
         <Image
           sizes='(max-width: 768px) 100vw,
